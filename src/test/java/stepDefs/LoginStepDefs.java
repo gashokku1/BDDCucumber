@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 
 public class LoginStepDefs {
@@ -33,8 +34,20 @@ public class LoginStepDefs {
 		  }
 	    
 	}
+
+	/*
+	 * @When("User Enters Credentials") public void user_search_java_tutorial() { //
+	 * Write code here that turns the phrase above into concrete actions WebElement
+	 * uName = driver.findElement(By.id("username")); uName.sendKeys("tomsmith");
+	 * WebElement pWord = driver.findElement(By.id("password"));
+	 * pWord.sendKeys("SuperSecretPassword!"); WebElement login =
+	 * driver.findElement(By.xpath("//*[text()=' Login']")); login.submit();
+	 * 
+	 * 
+	 * }
+	 */
 	@When("User Enters Credentials")
-	public void user_search_java_tutorial() {
+	public void user_search_java_tutorial(DataTable dataTable) {
 	    // Write code here that turns the phrase above into concrete actions
 		 WebElement uName = driver.findElement(By.id("username"));
 		  uName.sendKeys("tomsmith");
